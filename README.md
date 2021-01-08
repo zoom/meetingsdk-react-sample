@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Zoom Web SDK Sample React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is a [React](https://reactjs.org/) app generated via [Create React App](https://github.com/facebook/create-react-app) that uses the [Zoom Web SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) to start and join Zoom meetings and webinars.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To get started, clone the repo:
 
-### `yarn start`
+`$ git clone https://github.com/zoom/websdk-sample-react.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Once cloned, navigate to the `websdk-sample-react` directory:
 
-### `yarn test`
+   `$ cd websdk-sample-react`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Then install the dependencies:
 
-### `yarn build`
+   `$ npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Open the `websdk-sample-react` directory in your code editor.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open the `src/app.js` file, and enter values for the variables:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   | Variable                   | Description |
+   | -----------------------|-------------|
+   | signatureEndpoint          | Required, the endpoint url that returns a signature. [Get a signature endpoint here.](https://github.com/zoom/websdk-sample-signature-node.js) |
+   | apiKey                   | Required, your Zoom JWT App API Key. [You can get yours here](https://marketplace.zoom.us/develop/create). |
+   | meetingNumber                   | The Zoom Meeting / webinar number. |
+   | role                   | Required, 0 to join the meeting / webinar, 1 to start the meeting. |
+   | leaveUrl                   | Required, the url the user is taken to once the meeting is over. |
+   | userName                   | Required, A name for the user joining / starting the meeting / webinar. |
+   | userEmail                   | Optional, the user joining / starting the meeting / webinar. |
+   | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
 
-### `yarn eject`
+   Example:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```js
+   signatureEndpoint = 'http://localhost:4000'
+   apiKey = 'xu3asdfaJPaA_RJW2-9l5_HAaLA'
+   meetingNumber = '123456789'
+   role = 0
+   leaveUrl = 'http://localhost:3000'
+   userName = 'React'
+   userEmail = ''
+   password = ''
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Save `app.js`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Run the app:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   `$ npm start`
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Navigate to http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ![Zoom React Web SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987466824)
 
-### Code Splitting
+1. Click "Join Meeting" to join the meeting number specified in `src/app.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ![Zoom React Web SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987479967)
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or [another static web hosting service](#other-static-web-hosting), like an AWS S3 bucket.
 
-### Making a Progressive Web App
+### GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Create a repo on [GitHub](https://github.com).
 
-### Advanced Configuration
+1. Add the remote to your project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   `$ git remote add origin GITHUB_URL/GITHUB_USERNAME/GITHUB_REPO_NAME.git`
 
-### Deployment
+1. Open the `package.json` file and on line 5 replace the homepage value `""` with your GitHub repo name with a slash in front like this: `"/GITHUB_REPO_NAME"`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Build your project:
 
-### `yarn build` fails to minify
+   `$ yarn build`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Rename the `build` folder to `docs`
+
+1. Git add, commit, and push your project:
+
+   `$ git add -A`
+
+   `$ git commit -m "deploying to github"`
+
+   `$ git push origin master`
+
+1. On GitHub, in your repo, navigate to the "settings" page, scroll down to the "GitHub Pages" section, and choose the "master branch/docs folder" for the source.
+
+1. Now your project will be deployed to https://GITHUB_USERNAME.github.io/GITHUB_REPO_NAME.
+
+### Other Static Web Hosting
+
+1. Build your project:
+
+   `$ yarn build`
+
+1. Deploy the complied `/build` directory to a static web hosting service, like an AWS S3 bucket.
+
+## Need Support?
+
+The first place to look for help is on our [Developer Forum](https://devforum.zoom.us/), where Zoom Marketplace Developers can ask questions for public answers.
+
+If you can’t find the answer in the Developer Forum or your request requires sensitive information to be relayed, please email us at developersupport@zoom.us.

@@ -1,6 +1,8 @@
 {
   "name": "websdk-sample-react",
-  "version": "0.1.0",
+  "version": "1.8.5",
+  "author": "Tommy Gaessler",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

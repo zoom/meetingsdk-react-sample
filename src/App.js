@@ -1,23 +1,80 @@
-import logo from './logo.svg';
 import './App.css';
 
+declare var ZoomMtg
+
+ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.5/lib', '/av');
+
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareJssdk();
+
 function App() {
+
+  // setup your signature endpoint here: https://github.com/zoom/websdk-sample-signature-node.js
+  var signatureEndpoint = ''
+  var apiKey = ''
+  var meetingNumber = '123456789'
+  var role = 0
+  var leaveUrl = 'http://localhost:3000'
+  var userName = 'React'
+  var userEmail = ''
+  var passWord = ''
+
+  function getSignature(e) {
+    e.preventDefault();
+
+    fetch(signatureEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        meetingNumber: meetingNumber,
+        role: role
+      })
+    }).then(res => res.json())
+    .then(response => {
+      startMeeting(response.signature)
+    }).catch(error => {
+      console.error(error)
+    })
+  }
+
+  function startMeeting(signature) {
+    document.getElementById('zmmtg-root').style.display = 'block'
+
+    ZoomMtg.init({
+      leaveUrl: leaveUrl,
+      isSupportAV: true,
+      success: (success) => {
+        console.log(success)
+
+        ZoomMtg.join({
+          signature: signature,
+          meetingNumber: meetingNumber,
+          userName: userName,
+          apiKey: apiKey,
+          userEmail: userEmail,
+          passWord: passWord,
+          success: (success) => {
+            console.log(success)
+          },
+          error: (error) => {
+            console.log(error)
+          }
+        })
+
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <h1>Zoom WebSDK Sample React</h1>
+
+        <button onClick={getSignature}>Join Meeting</button>
+      </main>
     </div>
   );
 }
