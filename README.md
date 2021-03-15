@@ -102,6 +102,10 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 1. Deploy the complied `/build` directory to a static web hosting service, like an AWS S3 bucket.
 
+### Advanced Deployment
+
+For more advanced instructions on deployment, [see the React Deployment docs](https://create-react-app.dev/docs/deployment/).
+
 ## Need Support?
 
 The first place to look for help is on our [Developer Forum](https://devforum.zoom.us/), where Zoom Marketplace Developers can ask questions for public answers.
