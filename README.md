@@ -108,8 +108,6 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 For more advanced instructions on deployment, [see the React Deployment docs](https://create-react-app.dev/docs/deployment/).
 
-## Need Support?
+## Need help?
 
-The first place to look for help is on our [Developer Forum](https://devforum.zoom.us/), where Zoom Marketplace Developers can ask questions for public answers.
-
-If you can’t find the answer in the Developer Forum or your request requires sensitive information to be relayed, please email us at developersupport@zoom.us.
+If you're looking for help, try [Developer Support](https://devsupport.zoom.us) or our [Developer Forum](https://devforum.zoom.us). Priority support is also available with [Premier Developer Support](https://zoom.us/docs/en-us/developer-support-plans.html) plans.

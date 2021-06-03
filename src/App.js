@@ -6,6 +6,9 @@ ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.5/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
+// loads language files, also passes any error messages to the ui
+ZoomMtg.i18n.load('en-US');
+ZoomMtg.i18n.reload('en-US');
 
 function App() {
 
