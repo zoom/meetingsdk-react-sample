@@ -2,10 +2,10 @@ import './App.css';
 
 declare var ZoomMtg
 
-ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.6/lib', '/av');
+ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.7/lib', '/av');
 
 ZoomMtg.preLoadWasm();
-ZoomMtg.prepareJssdk();
+ZoomMtg.prepareWebSDK();
 // loads language files, also passes any error messages to the ui
 ZoomMtg.i18n.load('en-US');
 ZoomMtg.i18n.reload('en-US');
@@ -21,6 +21,10 @@ function App() {
   var userName = 'React'
   var userEmail = ''
   var passWord = ''
+  // pass in the registrant's token if your meeting or webinar requires registration. More info here:
+  // Meetings: https://marketplace.zoom.us/docs/sdk/native-sdks/web/build/meetings/join#join-registered
+  // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/build/webinars/join#join-registered-webinar
+  var registrantToken = ''
 
   function getSignature(e) {
     e.preventDefault();
@@ -45,7 +49,6 @@ function App() {
 
     ZoomMtg.init({
       leaveUrl: leaveUrl,
-      isSupportAV: true,
       success: (success) => {
         console.log(success)
 
@@ -56,6 +59,7 @@ function App() {
           apiKey: apiKey,
           userEmail: userEmail,
           passWord: passWord,
+          tk: registrantToken,
           success: (success) => {
             console.log(success)
           },
