@@ -1,32 +1,32 @@
-# Zoom Web SDK Sample React
+# Zoom Meeting SDK Sample React
 
 Use of this sample app is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html).
 
-This repo is a [React](https://reactjs.org/) app generated via [Create React App](https://github.com/facebook/create-react-app) that uses the [Zoom Web SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) to start and join Zoom meetings and webinars.
+This repo is a [React](https://reactjs.org/) app generated via [Create React App](https://github.com/facebook/create-react-app) that uses the [Zoom Meeting SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) to start and join Zoom meetings and webinars.
 
 ## Installation
 
 To get started, clone the repo:
 
-`$ git clone https://github.com/zoom/websdk-sample-react.git`
+`$ git clone https://github.com/zoom/meetingsdk-sample-react.git`
 
 ## Setup
 
-1. Once cloned, navigate to the `websdk-sample-react` directory:
+1. Once cloned, navigate to the `meetingsdk-sample-react` directory:
 
-   `$ cd websdk-sample-react`
+   `$ cd meetingsdk-sample-react`
 
 1. Then install the dependencies:
 
    `$ npm install`
 
-1. Open the `websdk-sample-react` directory in your code editor.
+1. Open the `meetingsdk-sample-react` directory in your code editor.
 
 1. Open the `src/app.js` file, and enter values for the variables:
 
    | Variable                   | Description |
    | -----------------------|-------------|
-   | signatureEndpoint          | Required, the endpoint url that returns a signature. [Get a signature endpoint here.](https://github.com/zoom/websdk-sample-signature-node.js) |
+   | signatureEndpoint          | Required, the endpoint url that returns a signature. [Get a signature endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
    | apiKey                   | Required, your Zoom JWT App API Key. [You can get yours here](https://marketplace.zoom.us/develop/create). |
    | meetingNumber                   | The Zoom Meeting / webinar number. |
    | role                   | Required, 0 to join the meeting / webinar, 1 to start the meeting. |
@@ -58,11 +58,11 @@ To get started, clone the repo:
 
 1. Navigate to http://localhost:3000.
 
-   ![Zoom React Web SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987466824)
+   ![Zoom React Meeting SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987466824)
 
 1. Click "Join Meeting" to join the meeting number specified in `src/app.js`.
 
-   ![Zoom React Web SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987479967)
+   ![Zoom React Meeting SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987479967)
 
 ## Deployment
 

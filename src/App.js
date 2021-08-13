@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <h1>Zoom WebSDK Sample React</h1>
+        <h1>Zoom Meeting SDK Sample React</h1>
 
         <button onClick={getSignature}>Join Meeting</button>
       </main>
