@@ -14,7 +14,7 @@ ZoomMtg.i18n.reload('en-US');
 
 function App() {
 
-  // setup your signature endpoint here: https://github.com/zoom/websdk-sample-signature-node.js
+  // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
   var signatureEndpoint = ''
   var apiKey = ''
   var meetingNumber = '123456789'
