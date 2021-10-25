@@ -22,7 +22,9 @@ To get started, clone the repo:
 
 1. Open the `meetingsdk-sample-react` directory in your code editor.
 
-1. Open the `src/app.js` file, and enter values for the variables:
+1. Open the `src/App.js` file, and enter values for the variables:
+
+   **NEW:** To use the [Component View](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view), replace `App.js` with `App-New.js`. (The `leaveUrl` is not needed).
 
    | Variable                   | Description |
    | -----------------------|-------------|
@@ -45,10 +47,10 @@ To get started, clone the repo:
    leaveUrl = 'http://localhost:3000'
    userName = 'React'
    userEmail = ''
-   password = ''
+   passWord = ''
    ```
 
-1. Save `app.js`.
+1. Save `App.js`.
 
 1. Run the app:
 
