@@ -82,7 +82,7 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 1. Build your project:
 
-   `$ yarn build`
+   `$ npm run build`
 
 1. Rename the `build` folder to `docs`
 
@@ -102,7 +102,7 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 1. Build your project:
 
-   `$ yarn build`
+   `$ npm run build`
 
 1. Deploy the complied `/build` directory to a static web hosting service, like an AWS S3 bucket.
 
