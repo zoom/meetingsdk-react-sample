@@ -33,9 +33,10 @@ To get started, clone the repo:
    | meetingNumber                   | The Zoom Meeting / webinar number. |
    | role                   | Required, 0 to join the meeting / webinar, 1 to start the meeting. |
    | leaveUrl                   | Required, the url the user is taken to once the meeting is over. |
-   | userName                   | Required, A name for the user joining / starting the meeting / webinar. |
-   | userEmail                   | Optional, the user joining / starting the meeting / webinar. |
+   | userName                   | Required, a name for the user joining / starting the meeting / webinar. |
+   | userEmail                   | Required for Webinar, optional for Meeting, required for meeting and webinar if [registration is required]([registration](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration)). The email of the user starting or joining the meeting / webinar. |
    | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
+   | registrantToken            | Required if your [meeting](https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/meetings#join-registered) or [webinar](https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars) requires [registration](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration). |
 
    Example:
 
@@ -48,6 +49,7 @@ To get started, clone the repo:
    userName = 'React'
    userEmail = ''
    passWord = ''
+   registrantToken = ''
    ```
 
 1. Save `App.js`.
