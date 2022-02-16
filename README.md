@@ -62,11 +62,11 @@ To get started, clone the repo:
 
 1. Navigate to http://localhost:3000.
 
-   ![Zoom React Meeting SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987466824)
+   ![Zoom React Meeting SDK](https://camo.githubusercontent.com/666b926e651de6aafd5e9f492d97a558100c6698acf734e434ab763d8e89bc2b/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f757365722d636f6e74656e742e73746f706c696768742e696f2f31393830382f31363037393837343636383234)
 
 1. Click "Join Meeting" to join the meeting number specified in `src/app.js`.
 
-   ![Zoom React Meeting SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987479967)
+   ![Zoom React Meeting SDK](https://camo.githubusercontent.com/516d9d0d9824e57b1e190cb85f19dc7658440ff63127c4776a7b3bd96181dbdd/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f757365722d636f6e74656e742e73746f706c696768742e696f2f31393830382f31363037393837343739393637)
 
 ## Deployment
 
