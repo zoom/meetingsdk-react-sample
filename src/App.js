@@ -1,10 +1,9 @@
 import React from 'react';
 
 import './App.css';
+import { ZoomMtg } from '@zoomus/websdk';
 
-declare var ZoomMtg
-
-ZoomMtg.setZoomJSLib('https://source.zoom.us/2.2.0/lib', '/av');
+ZoomMtg.setZoomJSLib('https://source.zoom.us/2.3.0/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
@@ -16,7 +15,8 @@ function App() {
 
   // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
   var signatureEndpoint = ''
-  var apiKey = ''
+  // This Sample App has been updated to use SDK App type credentials https://marketplace.zoom.us/docs/guides/build/sdk-app
+  var sdkKey = ''
   var meetingNumber = '123456789'
   var role = 0
   var leaveUrl = 'http://localhost:3000'
@@ -58,7 +58,7 @@ function App() {
           signature: signature,
           meetingNumber: meetingNumber,
           userName: userName,
-          apiKey: apiKey,
+          sdkKey: sdkKey,
           userEmail: userEmail,
           passWord: passWord,
           tk: registrantToken,

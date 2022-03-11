@@ -2,7 +2,15 @@
 
 Use of this sample app is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html).
 
+---
+
+**NOTE:** This Sample App has been updated to use [SDK App](https://marketplace.zoom.us/docs/guides/build/sdk-app) type credentials instead of [JWT App](https://marketplace.zoom.us/docs/guides/build/jwt-app) type credentials.
+
+---
+
 This repo is a [React](https://reactjs.org/) app generated via [Create React App](https://github.com/facebook/create-react-app) that uses the [Zoom Meeting SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) to start and join Zoom meetings and webinars.
+
+![Zoom Meeting SDK Client View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-client-sab-gallery.png)
 
 ## Installation
 
@@ -24,14 +32,14 @@ To get started, clone the repo:
 
 1. Open the `src/App.js` file, and enter values for the variables:
 
-   **NEW:** To use the [Component View](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view), replace `App.js` with `App-New.js`. (The `leaveUrl` is not needed).
+   **NEW:** To use the [Component View](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view), replace `App.js` with `App-New.js`. (The `leaveUrl` is not needed). Also, uncomment the Component View CSS tags and comment out the Client View CSS in `public/index.html`.
 
    | Variable                   | Description |
    | -----------------------|-------------|
    | signatureEndpoint          | Required, the endpoint url that returns a signature. [Get a signature endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
-   | apiKey                   | Required, your Zoom JWT App API Key. [You can get yours here](https://marketplace.zoom.us/develop/create). |
-   | meetingNumber                   | The Zoom Meeting / webinar number. |
-   | role                   | Required, 0 to join the meeting / webinar, 1 to start the meeting. |
+   | sdkKey                   | Required, your Zoom SDK App Key. [You can get yours here](https://marketplace.zoom.us/develop/create). |
+   | meetingNumber                   | Required, the Zoom Meeting or webinar number. |
+   | role                   | Required, `0` to specify participant, `1` to specify host. |
    | leaveUrl                   | Required, the url the user is taken to once the meeting is over. |
    | userName                   | Required, a name for the user joining / starting the meeting / webinar. |
    | userEmail                   | Required for Webinar, optional for Meeting, required for meeting and webinar if [registration is required]([registration](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration)). The email of the user starting or joining the meeting / webinar. |
@@ -42,7 +50,7 @@ To get started, clone the repo:
 
    ```js
    signatureEndpoint = 'http://localhost:4000'
-   apiKey = 'xu3asdfaJPaA_RJW2-9l5_HAaLA'
+   sdkKey = 'abc123'
    meetingNumber = '123456789'
    role = 0
    leaveUrl = 'http://localhost:3000'
@@ -60,13 +68,17 @@ To get started, clone the repo:
 
 ## Usage
 
-1. Navigate to http://localhost:3000.
+1. Navigate to http://localhost:3000 and click "Join Meeting".
 
-   ![Zoom React Meeting SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987466824)
+   ### Client View
 
-1. Click "Join Meeting" to join the meeting number specified in `src/app.js`.
+   ![Zoom Meeting SDK Client View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-client-sab-gallery.png)
 
-   ![Zoom React Meeting SDK](https://s3.amazonaws.com/user-content.stoplight.io/19808/1607987479967)
+   ### Component View
+
+   ![Zoom Meeting SDK Component View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-component-sab-gallery.png)
+
+   Learn more about [Gallery View requirements](https://marketplace.zoom.us/docs/sdk/overview/improve-performance) and [see more product screenshots](https://marketplace.zoom.us/docs/sdk/overview/improve-performance#sharedarraybuffer-ui-differences).
 
 ## Deployment
 

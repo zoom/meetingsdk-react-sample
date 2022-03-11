@@ -1,8 +1,7 @@
 import React from 'react';
 
 import './App.css';
-
-declare var ZoomMtgEmbedded
+import ZoomMtgEmbedded from '@zoomus/websdk/embedded';
 
 function App() {
 
@@ -10,7 +9,8 @@ function App() {
 
   // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
   var signatureEndpoint = ''
-  var apiKey = ''
+  // This Sample App has been updated to use SDK App type credentials https://marketplace.zoom.us/docs/guides/build/sdk-app
+  var sdkKey = ''
   var meetingNumber = '123456789'
   var role = 0
   var userName = 'React'
@@ -64,7 +64,7 @@ function App() {
     });
 
     client.join({
-    	apiKey: apiKey,
+    	sdkKey: sdkKey,
     	signature: signature,
     	meetingNumber: meetingNumber,
     	password: passWord,
