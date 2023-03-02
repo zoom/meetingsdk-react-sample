@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import { ZoomMtg } from '@zoomus/websdk';
 
-ZoomMtg.setZoomJSLib('https://source.zoom.us/2.10.0/lib', '/av');
+ZoomMtg.setZoomJSLib('https://source.zoom.us/2.10.1/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
