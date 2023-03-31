@@ -7,18 +7,13 @@ function App() {
 
   const client = ZoomMtgEmbedded.createClient();
 
-  // setup your Meeting SDK auth endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
   var authEndpoint = ''
-  // This sample app has been updated to use Meeting SDK credentials https://marketplace.zoom.us/docs/guides/build/sdk-app
   var sdkKey = ''
   var meetingNumber = '123456789'
   var passWord = ''
   var role = 0
   var userName = 'React'
   var userEmail = ''
-  // pass in the registrant's token if your meeting or webinar requires registration. More info here:
-  // Meetings: https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/meetings#join-registered
-  // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/webinars#join-registered
   var registrantToken = ''
   var zakToken = ''
 
