@@ -39,35 +39,23 @@ function App() {
 
     let meetingSDKElement = document.getElementById('meetingSDKElement');
 
-    client.init({
-      debug: true,
-      zoomAppRoot: meetingSDKElement,
-      language: 'en-US',
-      customize: {
-        meetingInfo: ['topic', 'host', 'mn', 'pwd', 'telPwd', 'invite', 'participant', 'dc', 'enctype'],
-        toolbar: {
-          buttons: [
-            {
-              text: 'Custom Button',
-              className: 'CustomButton',
-              onClick: () => {
-                console.log('custom button');
-              }
-            }
-          ]
-        }
-      }
-    });
-
-    client.join({
-      signature: signature,
-    	sdkKey: sdkKey,
-    	meetingNumber: meetingNumber,
-    	password: passWord,
-    	userName: userName,
-      userEmail: userEmail,
-      tk: registrantToken,
-      zak: zakToken
+    client.init({zoomAppRoot: meetingSDKElement, language: 'en-US'}).then(() => {
+      client.join({
+        signature: signature,
+        sdkKey: sdkKey,
+        meetingNumber: meetingNumber,
+        password: passWord,
+        userName: userName,
+        userEmail: userEmail,
+        tk: registrantToken,
+        zak: zakToken
+      }).then(() => {
+        console.log('joined succesfully')
+      }).catch((error) => {
+        console.log(error)
+      })
+    }).catch((error) => {
+      console.log(error)
     })
   }
 
