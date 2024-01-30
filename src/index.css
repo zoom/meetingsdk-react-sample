@@ -15,3 +15,5 @@ html, body {
   display: none;
   min-width: 0 !important;
 }
+
+iframe#webpack-dev-server-client-overlay{display:none!important}
