@@ -11,19 +11,19 @@ This repo is a [React](https://reactjs.org/) app generated via [Create React App
 
 To get started, clone the repo:
 
-`$ git clone https://github.com/zoom/meetingsdk-sample-react.git`
+`$ git clone https://github.com/zoom/meetingsdk-react-sample.git`
 
 ## Setup
 
-1. Once cloned, navigate to the `meetingsdk-sample-react` directory:
+1. Once cloned, navigate to the `meetingsdk-react-sample` directory:
 
-   `$ cd meetingsdk-sample-react`
+   `$ cd meetingsdk-react-sample`
 
 1. Then install the dependencies:
 
    `$ npm install`
 
-1. Open the `meetingsdk-sample-react` directory in your code editor.
+1. Open the `meetingsdk-react-sample` directory in your code editor.
 
 1. Open the `src/App.js` file, and enter values for the variables:
 
@@ -31,7 +31,7 @@ To get started, clone the repo:
 
    | Variable                   | Description |
    | -----------------------|-------------|
-   | authEndpoint          | Required, your Meeting SDK auth endpoint that secuerly generates a Meeting SDK JWT. [Get a Meeting SDK auth endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
+   | authEndpoint          | Required, your Meeting SDK auth endpoint that securely generates a Meeting SDK JWT. [Get a Meeting SDK auth endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
    | sdkKey                   | Required, your Zoom Meeting SDK Key or Client ID for Meeting SDK app type's created after February 11, 2023. [You can get yours here](https://developers.zoom.us/docs/meeting-sdk/developer-accounts/#get-meeting-sdk-credentials). |
    | meetingNumber                   | Required, the Zoom Meeting or webinar number. |
    | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
