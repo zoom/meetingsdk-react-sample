@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main#home {
+    width: 100%;
+    height: 100vh;
+    background-color: #3ba3f8;
+
+    .title {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 35px;
+        height: 40px;
+        text-align: center;
+        justify-self: center;
+    }
+
+    #container {
+        height: calc(100vh - 40px);
+        width: 100%;
+        min-width: 410px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #form {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            width: 400px;
+
+            input {
+                border-radius: 10px;
+                border: 1px solid #dbdbdb;
+                outline: none;
+                height: 50px;
+                text-decoration: none;
+                width: 100%;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+
+            select {
+                border-radius: 10px;
+                border: 1px solid #dbdbdb;
+                outline: none;
+                height: 50px;
+                text-decoration: none;
+                width: 100%;
+                padding-left: 10px;
+                margin-bottom: 10px;
+            }
+
+            input::placeholder {
+                color: #111;
+                opacity: .2;
+            }
+
+            span {
+                font-weight: bold;
+                color: #383838;
+                font-size: 20px;
+            }
+
+            button {
+                background-color: #2D8CFF;
+                color: #ffffff;
+                text-decoration: none;
+                height: 50px;
+                display: inline-block;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                width: 100%;
+
+                align-items: center;
+
+                &:hover {
+                    background-color: #2681F2;
+                }
+            }
+        }
+
+
+        #meetingSDKElement {
+            display: block;
+            position: absolute;
+        }
+    }
+}

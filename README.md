@@ -67,7 +67,10 @@ To get started, clone the repo:
 
 1. Navigate to http://localhost:3000 and click "Join Meeting".
 
+   ![login screen](/public/images/saulo-costa.jpeg)
+
    ### Client View
+
 
    ![Zoom Meeting SDK Client View](/public/images/meetingsdk-web-client-view.gif)
 
