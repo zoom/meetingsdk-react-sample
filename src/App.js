@@ -43,6 +43,7 @@ function App() {
     ZoomMtg.init({
       leaveUrl: leaveUrl,
       patchJsMedia: true,
+      leaveOnPageUnload: true,
       success: (success) => {
         console.log(success)
 

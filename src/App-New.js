@@ -39,7 +39,7 @@ function App() {
 
     let meetingSDKElement = document.getElementById('meetingSDKElement');
 
-    client.init({zoomAppRoot: meetingSDKElement, language: 'en-US', patchJsMedia: true}).then(() => {
+    client.init({zoomAppRoot: meetingSDKElement, language: 'en-US', patchJsMedia: true, leaveOnPageUnload: true}).then(() => {
       client.join({
         signature: signature,
         sdkKey: sdkKey,
