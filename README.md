@@ -3,7 +3,7 @@
 Use of this sample app is subject to our [Terms of Use](https://explore.zoom.us/en/legal/zoom-api-license-and-tou/).
 
 
-This repo is a [React](https://reactjs.org/) app generated via [Create React App](https://github.com/facebook/create-react-app) that uses the [Zoom Meeting SDK](https://developers.zoom.us/docs/meeting-sdk/web/) to start and join Zoom meetings and webinars.
+This repo is a [React](https://reactjs.org/) app generated via [Vite](https://vitejs.dev/) that uses the [Zoom Meeting SDK](https://developers.zoom.us/docs/meeting-sdk/web/) to start and join Zoom meetings and webinars.
 
 ![Zoom Meeting SDK Client View](/public/images/meetingsdk-web-client-view.gif)
 
@@ -25,9 +25,9 @@ To get started, clone the repo:
 
 1. Open the `meetingsdk-react-sample` directory in your code editor.
 
-1. Open the `src/App.js` file, and enter values for the variables:
+1. Open the `src/App.tsx` file, and enter values for the variables:
 
-   **NEW:** To use the [Component View](https://developers.zoom.us/docs/meeting-sdk/web/component-view/), replace `App.js` with `App-New.js`. (The `leaveUrl` is not needed). Also, uncomment the Component View CSS tags and comment out the Client View CSS in `public/index.html`.
+   **NEW:** To use the [Component View](https://developers.zoom.us/docs/meeting-sdk/web/component-view/), replace `App.tsx` with `App-New.tsx`. (The `leaveUrl` is not needed).
 
    | Variable                   | Description |
    | -----------------------|-------------|
@@ -54,10 +54,10 @@ To get started, clone the repo:
    var userEmail = ''
    var registrantToken = ''
    var zakToken = ''
-   var leaveUrl = 'http://localhost:3000'
+   var leaveUrl = 'http://localhost:5173'
    ```
 
-1. Save `App.js`.
+1. Save `App.tsx`.
 
 1. Run the app:
 
@@ -65,7 +65,7 @@ To get started, clone the repo:
 
 ## Usage
 
-1. Navigate to http://localhost:3000 and click "Join Meeting".
+1. Navigate to http://localhost:5173 and click "Join Meeting".
 
    ### Client View
 
@@ -119,7 +119,7 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 ### Advanced Deployment
 
-For more advanced instructions on deployment, [see the React Deployment docs](https://create-react-app.dev/docs/deployment/).
+For more advanced instructions on deployment, [see the Vite Deployment docs](https://vitejs.dev/guide/build.html#deployment).
 
 ## Need help?
 
