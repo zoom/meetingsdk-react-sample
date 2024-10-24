@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="App">
-      <main className="center">
+      <main>
         <h1>Zoom Meeting Running on AWS with Amplify</h1>
         <button onClick={getSignature}>Join Meeting</button>
       </main>
