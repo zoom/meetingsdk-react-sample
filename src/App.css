@@ -23,3 +23,10 @@ main button {
 main button:hover {
   background-color: #2681F2;
 }
+
+
+.center {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
