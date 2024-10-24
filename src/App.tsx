@@ -6,7 +6,7 @@ ZoomMtg.prepareWebSDK();
 
 function App() {
   const authEndpoint = "https://zoom-meeting-sdk-auth-sample-rn55.onrender.com"; // http://localhost:4000
-  const sdkKey = "RImwskUMhRVTtjQ5uXiOO3jeNocl7j4T";
+  const sdkKey = "31mTq8crR1awQ1k37phHoQ";
   const meetingNumber = "9083285683";
   const passWord = "";
   const role = 0;
