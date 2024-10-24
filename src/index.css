@@ -5,11 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #484c52;
 }
 
 html, body {
   min-width: 0 !important;
+  background-color: #484c52;
 }
 
 #zmmtg-root {
