@@ -1,3 +1,7 @@
+body {
+  background-color: #484c52;
+}
+
 main {
   width: 70%;
   margin: auto;
@@ -13,7 +17,7 @@ main button {
   padding-bottom: 10px;
   padding-left: 40px;
   padding-right: 40px;
-  display: inline-block;
+  display: inline-block;  
   border-radius: 10px;
   cursor: pointer;
   border: none;
