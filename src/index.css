@@ -14,6 +14,7 @@ html, body {
 #zmmtg-root {
   display: none;
   min-width: 0 !important;
+  background-color: #2D8CFF;
 }
 
 iframe#webpack-dev-server-client-overlay{display:none!important}
