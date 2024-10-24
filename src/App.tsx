@@ -14,7 +14,7 @@ function App() {
   const userEmail = "";
   const registrantToken = "";
   const zakToken = "";
-  const leaveUrl = "http://benstef.com";
+  const leaveUrl = "https://bstef.github.io/thankyou.html";
 
   const getSignature = async () => {
     try {
