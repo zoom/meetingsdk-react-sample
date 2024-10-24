@@ -1,4 +1,14 @@
+#root {
+  background-image: linear-gradient(to bottom, grey , black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
 main {
+  color: #ffffff;
   width: 70%;
   margin: auto;
   text-align: center;
