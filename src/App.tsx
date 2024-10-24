@@ -8,7 +8,7 @@ function App() {
   const authEndpoint = "https://zoom-meeting-sdk-auth-sample-rn55.onrender.com"; // http://localhost:4000
   const sdkKey = "31mTq8crR1awQ1k37phHoQ";
   const meetingNumber = "9083285683";
-  const passWord = "";
+  const passWord = "280443";
   const role = 0;
   const userName = "React";
   const userEmail = "";
