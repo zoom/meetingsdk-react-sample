@@ -9,7 +9,7 @@ function App() {
   const sdkKey = "31mTq8crR1awQ1k37phHoQ";
   const meetingNumber = "9083285683";
   const passWord = "280443";
-  const role = 0;
+  const role = 1;
   const userName = "React";
   const userEmail = "";
   const registrantToken = "";
