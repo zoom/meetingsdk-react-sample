@@ -35,7 +35,6 @@ To get started, clone the repo:
    | sdkKey                   | Required, your Zoom Meeting SDK Key or Client ID for Meeting SDK app type's created after February 11, 2023. [You can get yours here](https://developers.zoom.us/docs/meeting-sdk/developer-accounts/#get-meeting-sdk-credentials). |
    | meetingNumber                   | Required, the Zoom Meeting or webinar number. |
    | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
-   | role                   | Required, `0` to specify participant, `1` to specify host. |
    | userName                   | Required, a name for the user joining / starting the meeting / webinar. |
    | userEmail                   | Required for Webinar, optional for Meeting, required for meeting and webinar if [registration is required](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration). The email of the user starting or joining the meeting / webinar. |
    | registrantToken            | Required if your [meeting](https://developers.zoom.us/docs/meeting-sdk/web/client-view/meetings/#join-meeting-with-registration-required) or [webinar](https://developers.zoom.us/docs/meeting-sdk/web/client-view/webinars/#join-webinar-with-registration-required) requires [registration](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration). |
@@ -49,7 +48,6 @@ To get started, clone the repo:
    var sdkKey = 'abc123'
    var meetingNumber = '123456789'
    var passWord = ''
-   var role = 0
    var userName = 'React'
    var userEmail = ''
    var registrantToken = ''
