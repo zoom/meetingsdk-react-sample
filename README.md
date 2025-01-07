@@ -61,7 +61,7 @@ To get started, clone the repo:
 
 1. Run the app:
 
-   `$ npm start`
+   `$ npm run dev`
 
 ## Usage
 
