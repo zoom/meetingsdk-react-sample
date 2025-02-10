@@ -91,6 +91,8 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 1. Open the `package.json` file and on line 5 replace the homepage value `""` with your GitHub repo name with a slash in front like this: `"/GITHUB_REPO_NAME"`.
 
+1. Open the `vite.config.ts` file and add `base: "/GITHUB_REPO_NAME/"` in `defineConfig` helper.
+
 1. Build your project:
 
    `$ npm run build`
