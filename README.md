@@ -83,13 +83,15 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
 ### GitHub Pages
 
-1. Create a repo on [GitHub](https://github.com).
+1. Clone this repo and configure the `authEndpoint`.
+
+1. Create a new repo on [GitHub](https://github.com).
 
 1. Add the remote to your project:
 
-   `$ git remote add origin GITHUB_URL/GITHUB_USERNAME/GITHUB_REPO_NAME.git`
+   `$ git remote add myorigin GITHUB_URL/GITHUB_USERNAME/GITHUB_REPO_NAME.git`
 
-1. Open the `package.json` file and on line 5 replace the homepage value `""` with your GitHub repo name with a slash in front like this: `"/GITHUB_REPO_NAME"`.
+1. Open the `vite.config.ts` file and add `base: "/GITHUB_REPO_NAME/"` in the `defineConfig` helper.
 
 1. Build your project:
 
@@ -103,9 +105,9 @@ The React Sample App can be easily deployed to [GitHub Pages](#github-pages), or
 
    `$ git commit -m "deploying to github"`
 
-   `$ git push origin master`
+   `$ git push myorigin main`
 
-1. On GitHub, in your repo, navigate to the "settings" page, scroll down to the "GitHub Pages" section, and choose the "master branch/docs folder" for the source.
+1. On GitHub, in your repo, navigate to the "settings" page, scroll down to the "GitHub Pages" section, and choose the "main" branch and "/docs" folder for the source.
 
 1. Now your project will be deployed to https://GITHUB_USERNAME.github.io/GITHUB_REPO_NAME.
 
