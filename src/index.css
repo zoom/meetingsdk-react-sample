@@ -13,7 +13,17 @@ html, body {
 
 #zmmtg-root {
   display: none;
-  min-width: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 
 iframe#webpack-dev-server-client-overlay{display:none!important}
+
+.App {
+  position: relative;
+  z-index: 1;
+}
