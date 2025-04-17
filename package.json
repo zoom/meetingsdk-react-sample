@@ -1,6 +1,6 @@
 {
   "name": "meetingsdk-react-sample",
-  "version": "3.12.0",
+  "version": "3.13.0",
   "author": "Zoom Video Communications, Inc.",
   "contributors": [
     {
@@ -20,7 +20,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@zoom/meetingsdk": "^3.12.0",
+    "@zoom/meetingsdk": "^3.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
