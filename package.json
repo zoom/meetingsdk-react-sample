@@ -20,9 +20,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@zoom/meetingsdk": "^3.13.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@zoom/meetingsdk": "3.11.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
