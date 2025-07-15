@@ -6,7 +6,6 @@ ZoomMtg.prepareWebSDK();
 
 function App() {
   const authEndpoint = ""; // http://localhost:4000
-  const sdkKey = "";
   const meetingNumber = "";
   const passWord = "";
   const role = 0;
@@ -26,9 +25,9 @@ function App() {
           role: role,
         }),
       });
-      const res = await req.json()
+      const res = await req.json();
       const signature = res.signature as string;
-      startMeeting(signature)
+      startMeeting(signature);
     } catch (e) {
       console.log(e);
     }
@@ -46,7 +45,6 @@ function App() {
         // can this be async?
         ZoomMtg.join({
           signature: signature,
-          sdkKey: sdkKey,
           meetingNumber: meetingNumber,
           passWord: passWord,
           userName: userName,
