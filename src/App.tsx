@@ -23,6 +23,7 @@ function App() {
         body: JSON.stringify({
           meetingNumber: meetingNumber,
           role: role,
+          videoWebRtcMode: 1,
         }),
       });
       const res = await req.json();

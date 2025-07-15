@@ -5,7 +5,6 @@ function App() {
   const client = ZoomMtgEmbedded.createClient();
 
   const authEndpoint = ""; // http://localhost:4000
-  const sdkKey = "";
   const meetingNumber = "";
   const passWord = "";
   const role = 0;
@@ -22,11 +21,12 @@ function App() {
         body: JSON.stringify({
           meetingNumber: meetingNumber,
           role: role,
+          videoWebRtcMode: 1,
         }),
       });
-      const res = await req.json()
+      const res = await req.json();
       const signature = res.signature as string;
-      startMeeting(signature)
+      startMeeting(signature);
     } catch (e) {
       console.log(e);
     }
@@ -40,17 +40,16 @@ function App() {
         language: "en-US",
         patchJsMedia: true,
         leaveOnPageUnload: true,
-      })
+      });
       await client.join({
         signature: signature,
-        sdkKey: sdkKey,
         meetingNumber: meetingNumber,
         password: passWord,
         userName: userName,
         userEmail: userEmail,
         tk: registrantToken,
         zak: zakToken,
-      })
+      });
       console.log("joined successfully");
     } catch (error) {
       console.log(error);
